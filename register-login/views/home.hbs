@@ -1,0 +1,20 @@
+<form method="POST" action="/register">
+  <div>Username: <input name="username" /></div>
+  <div>Password: <input name="password" /></div>
+  <div>Zvanje: <input name="zvanje" /></div>
+  <div><button type="submit">Register</button></div>
+</form>
+
+{{#if authenticationMiddlewareSudija}}
+<a href="#">Dugme za sudiju</a>
+{{/if}}
+
+{{#if isAuthenticated}}
+<a href="/logout">Logout</a>
+{{else}}
+<a href="/loginSudija">Login Sudija</a>
+<a href="/loginDelegat">Login Delegat</a>
+{{/if}}
+<table></table>
+
+<script src="skripta.js" type="text/javascript"></script>
